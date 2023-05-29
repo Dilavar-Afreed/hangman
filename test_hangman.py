@@ -74,13 +74,17 @@ def test_masked_word_guess_cmplt():
 # no of turns
 
 def test_no_of_turns_no_guess():
-    assert hangman.n_turns("elephant","") == 7
-
+    assert hangman.n_turns("elephant", "", []) == 7
 
 def test_no_of_turns_wrong_guess():
-    assert hangman.n_turns("elephant","x") == 6
+    assert hangman.n_turns("elephant", "x", []) == 6
 
-def test_no_of_turns_wright_guess():
-    assert hangman.n_turns("elephant","e") ==7
+def test_no_of_turns_right_guess():
+    assert hangman.n_turns("elephant", "e", []) == 7
+
+def test__no_of_turns_same_wrong_guess():
+    guesses = ["x"]
+    assert hangman.n_turns("elephant", "x", guesses) == 7
+    assert hangman.n_turns("elephant", "x", list(set(guesses + ["x"]))) == 7
 
 
