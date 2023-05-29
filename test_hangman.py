@@ -74,3 +74,6 @@ def test_masked_word_no_guess():
 
 def test_masked_word_1_guess():
     assert hangman.mask_word("elephant","l") == "-l------"
+
+def test_masked_word_wrong_guess():
+    assert hangman.mask_word("elephant","x") == "--------"
