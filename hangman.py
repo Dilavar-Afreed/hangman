@@ -22,9 +22,11 @@ def mask_word(a, b):
 
     return "".join(z)
 
-def n_turns(guesses):
+def n_turns(word,guess):
     max_turns = 7
-    turns_left = max_turns - len(guesses)
+    if guess not in word:
+        turns_left = max_turns -1
+    
     return turns_left
 
 

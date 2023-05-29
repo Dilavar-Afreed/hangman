@@ -52,19 +52,7 @@ def test_select_random_word_no_repetitions():
 
 
 
-# def test_nturns():
-#     name = tempfile.mktemp()
-#     lines = ["Alexander\n", "AMD\n", "California\n", "pelican\n"]
-    
-#     with open(name, "w") as f:
-#         f.writelines(lines)
 
-#     counter = 0
-#     with open(name, "r") as f:
-#         for line in f:
-#             counter += 1
-
-#     assert counter == len(lines)
 
 
 
@@ -87,6 +75,10 @@ def test_masked_word_guess_cmplt():
      assert hangman.mask_word("elephant",["e","l","p","h","a","n","t"]) == "elephant"
 
 
-def test_no_of_turns():
+def test_no_of_turns_no_guess():
     assert hangman.n_turns([]) == 7
+
+
+def test_no_of_turns_wrong_guess():
+    assert hangman.n_turns("elephant","x") == 6
 
