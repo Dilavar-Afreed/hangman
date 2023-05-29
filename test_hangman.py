@@ -73,10 +73,9 @@ def test_masked_word_guess_multi():
 
 def test_masked_word_guess_cmplt():
      assert hangman.mask_word("elephant",["e","l","p","h","a","n","t"]) == "elephant"
-
-
+     
 def test_no_of_turns_no_guess():
-    assert hangman.n_turns([]) == 7
+    assert hangman.n_turns("elephant","") == 7
 
 
 def test_no_of_turns_wrong_guess():
