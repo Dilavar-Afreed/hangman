@@ -93,6 +93,9 @@ def test_fresh_guess():
 
 
 
+def test_same_guess():
+    assert hangman.guess_list("a",["a"])== ["a"]
+
 
 
 
