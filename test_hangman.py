@@ -88,3 +88,11 @@ def test__no_of_turns_same_wrong_guess():
     assert hangman.n_turns("elephant", "x", list(set(guesses + ["x"]))) == 7
 
 
+def test_fresh_guess():
+    assert hangman.guesslist("a",[])== [].append("a")
+
+
+
+
+
+
