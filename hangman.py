@@ -32,7 +32,6 @@ def n_turns(word, guess, guesses):
     return turns_left
 
 def guess_list(guess,guesses):
-    guesses=[]
     if guess not in guesses:
         guesses.append(guess)
     
