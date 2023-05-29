@@ -71,3 +71,6 @@ def test_select_random_word_no_repetitions():
 
 def test_masked_word_no_guess():
     assert hangman.mask_word("elephant") == "--------"
+
+def test_masked_word_1_guess():
+    assert hangman.mask_word("elephant",["l"]) == "-l------"
