@@ -15,8 +15,8 @@ def get_random_word(wordfile="/usr/share/dict/words"):
 def mask_word(a, b):
     z = []
     for i in a:
-        if i == b:
-            z.append(b)
+        if i in b:
+            z.append(i)
         else:
             z.append("-")
 

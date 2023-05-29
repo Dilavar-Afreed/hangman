@@ -81,3 +81,7 @@ def test_masked_word_wrong_guess():
 
 def test_masked_word_guess_multi():
      assert hangman.mask_word("elephant","e") == "e-e-----"
+
+
+def test_masked_word_guess_cmplt():
+     assert hangman.mask_word("elephant",["e","l","p","h","a","n","t"]) == "elephant"
