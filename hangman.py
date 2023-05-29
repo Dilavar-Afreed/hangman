@@ -23,5 +23,3 @@ def mask_word(a, b):
     return "".join(z)
 
 
-a = mask_word("elephant", "l")
-print(a)
