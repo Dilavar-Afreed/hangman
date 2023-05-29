@@ -88,6 +88,5 @@ def test_masked_word_guess_cmplt():
 
 
 def test_no_of_turns():
-    assert hangman.nturns([]) == "no of turns",7
-    
+    assert hangman.n_turns([]) == 7
 

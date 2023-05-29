@@ -22,4 +22,13 @@ def mask_word(a, b):
 
     return "".join(z)
 
+def n_turns(guesses):
+    max_turns = 7
+    turns_left = max_turns - len(guesses)
+    return turns_left
+
+
+
+    
+
 
