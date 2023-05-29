@@ -89,7 +89,7 @@ def test__no_of_turns_same_wrong_guess():
 
 
 def test_fresh_guess():
-    assert hangman.guesslist("a",[])== [].append("a")
+    assert hangman.guess_list("a",[])== [].append("a")
 
 
 
