@@ -1,7 +1,7 @@
 import random
 
 
-def get_random_word(wordfile = "/usr/share/dict/words"):
+def get_random_word(wordfile="/usr/share/dict/words"):
     candidate_words = []
     with open(wordfile) as f:
         for word in f:
@@ -11,6 +11,17 @@ def get_random_word(wordfile = "/usr/share/dict/words"):
     word = random.choice(candidate_words)
     return word
 
-def mask_word(a):
-    x="-"*len(a)
-    return x
+
+def mask_word(a, b):
+    z = []
+    for i in a:
+        if i == b:
+            z.append(b)
+        else:
+            z.append("-")
+
+    return "".join(z)
+
+
+a = mask_word("elephant", "l")
+print(a)
