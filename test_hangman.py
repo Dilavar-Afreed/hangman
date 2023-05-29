@@ -51,11 +51,7 @@ def test_select_random_word_no_repetitions():
 
 
 
-
-
-
-
-
+# masked words
 
 def test_masked_word_no_guess():
     assert hangman.mask_word("elephant",[]) == "--------"
@@ -73,11 +69,18 @@ def test_masked_word_guess_multi():
 
 def test_masked_word_guess_cmplt():
      assert hangman.mask_word("elephant",["e","l","p","h","a","n","t"]) == "elephant"
-     
+
+
+# no of turns
+
 def test_no_of_turns_no_guess():
     assert hangman.n_turns("elephant","") == 7
 
 
 def test_no_of_turns_wrong_guess():
     assert hangman.n_turns("elephant","x") == 6
+
+def test_no_of_turns_wright_guess():
+    assert hangman.n_turns("elephant","e") ==7
+
 
