@@ -44,7 +44,8 @@ def play_hangman():
     turns_left = 7
     print("Welcome to Hangman!")
     
-    while turns_left > 0:
+    while turns_left > 0 and mask_word != word :
+        print(word)
         masked_word = mask_word(word, guesses)
         print("Word:", masked_word)
         print("Turns left:", turns_left)
@@ -75,7 +76,6 @@ def play_hangman():
 
     print("Thank you for playing Hangman!")
 
-# Run the game
 play_hangman()
     
 
